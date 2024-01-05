@@ -22,9 +22,9 @@ const Navbar = () => {
             <div className="hidden md:flex md:flex-row md:gap-10 md:pr-10 font-normal text-lg">
                 <Link to={`/`} className={linkStyle1}>Home</Link>
                 <Link to={`booking`} className={linkStyle1}>Bookings</Link>
-                <Link to={`about`} className={linkStyle1}>About</Link>
+                <Link to={`explore`} className={linkStyle1}>Explore</Link>
                 <Link to={`blog`} className={linkStyle1}>Blogs</Link>
-                <Link to={`contact`} className={linkStyle1}>Contact</Link>
+                <Link to={`about`} className={linkStyle1}>About</Link>
             </div>
 
             <div className="pr-10 md:hidden">
@@ -35,9 +35,9 @@ const Navbar = () => {
                             <div className="flex flex-col gap-7 font-normal text-lg">
                                 <Link to={`/`} className={linkStyle}>Home</Link>
                                 <Link to={`booking`} className={linkStyle}>Bookings</Link>
-                                <Link to={`about`} className={linkStyle}>About</Link>
+                                <Link to={`explore`} className={linkStyle}>Explore</Link>
                                 <Link to={`blog`} className={linkStyle}>Blogs</Link>
-                                <Link to={`contact`} className={linkStyle}>Contact</Link>
+                                <Link to={`about`} className={linkStyle}>About</Link>
                             </div>
                         </SheetHeader>
                     </SheetContent>

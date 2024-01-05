@@ -2,7 +2,8 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Blogs from "./pages/Blogs";
 import Booking from "./pages/Booking";
-import Contact from "./pages/Contact";
+// import Contact from "./pages/Contact";
+import Explore from "./pages/Explore";
 import Home from "./pages/Home";
 import {
   createBrowserRouter,
@@ -43,8 +44,8 @@ function App() {
           element: <Blogs />
         },
         {
-          path: "/contact",
-          element: <Contact />
+          path: "/explore",
+          element: <Explore />
         }
       ],
     },
