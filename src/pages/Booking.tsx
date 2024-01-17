@@ -67,7 +67,7 @@ const instructorDetails = [
 
 const Booking = () => {
 
-  const [selectedInstructor, setselectedInstructor] = useState<string | null>("Nothing selected");
+  const [_selectedInstructor, setselectedInstructor] = useState<string | null>("Nothing selected");
 
   const [formData, setFormData] = useState<FormData>({
     Name: '',
@@ -128,7 +128,7 @@ const Booking = () => {
         method: "POST",
         body: form_Data
       })
-        .then((response) => {
+        .then((_response) => {
           // console.log("Success!", response);
           alert("Form submitted successfully!");
           window.location.reload();
