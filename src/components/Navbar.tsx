@@ -4,8 +4,10 @@ import {
     SheetContent,
     SheetHeader,
     SheetTrigger,
+    SheetClose
 } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
+import logo from "../assets/logos/YogEase.svg";
 
 // GT Walsheim Medium
 const Navbar = () => {
@@ -17,7 +19,10 @@ const Navbar = () => {
     return (
         <div className="flex flex-row justify-between items-center w-screen h-20 sticky top-0 shadow-sm z-10 backdrop-blur-md">
 
-            <h1 className="pl-10">Yogify</h1>
+            <div className="flex items-center pl-10">
+                <img src={logo} alt="logo" className="w-10"/>
+                <h1 className="ml--10 font-bold text-2xl text-red-600">YogEase</h1>
+            </div>
 
             <div className="hidden md:flex md:flex-row md:gap-10 md:pr-10 font-normal text-lg">
                 <Link to={`/`} className={linkStyle1}>Home</Link>
@@ -33,14 +38,14 @@ const Navbar = () => {
                     <SheetContent side={"top"}>
                         <SheetHeader className="flex items-center">
                             <div className="flex flex-col gap-7 font-normal text-lg">
-                                <Link to={`/`} className={linkStyle}>Home</Link>
-                                <Link to={`booking`} className={linkStyle}>Bookings</Link>
-                                <Link to={`explore`} className={linkStyle}>Explore</Link>
-                                <Link to={`blog`} className={linkStyle}>Blogs</Link>
-                                <Link to={`about`} className={linkStyle}>About</Link>
-                            </div>
+                                <Link to={`/`} className={linkStyle}><SheetClose>Home</SheetClose></Link>
+                                <Link to={`booking`} className={linkStyle}><SheetClose>Booking</SheetClose></Link>
+                                <Link to={`explore`} className={linkStyle}><SheetClose>Explore</SheetClose></Link>
+                                <Link to={`blog`} className={linkStyle}><SheetClose>Blogs</SheetClose></Link>
+                                <Link to={`about`} className={linkStyle}><SheetClose>About</SheetClose></Link>                              
+                            </div>      
                         </SheetHeader>
-                    </SheetContent>
+                    </SheetContent>               
                 </Sheet>
             </div>
 

@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import Footer from '@/components/Footer';
+import { Link } from 'react-router-dom';
 
 const faqs = [
   {
@@ -37,16 +38,16 @@ const Home = () => {
       {/* Upper part */}
       <div className='flex flex-col md:flex-row px-10 justify-center md:justify-between'>
         <img src={homeImage} alt="homeImage" className='w-auto md:w-1/2' />
-        <h2 className='md:text-end md:text-8xl text-6xl text-center font-extrabold self-center'>connecting you with yoga instructors.</h2>
+        <h2 className='md:text-end md:text-8xl text-6xl text-center font-extrabold self-center text-red-700'>connecting you with yoga instructors.</h2>
       </div>
 
       {/* Middle part */}
       <div className='flex flex-col-reverse md:my-40 my-12 md:flex-row px-10 justify-center md:justify-between'>
         <div className='self-center'>
-          <p className='md:text-5xl md:text-start text-center text-3xl font-semibold'> we make yoga accessible to all. choose from our selected list of instructors and start your yoga journey today.</p>
+          <p className='md:text-5xl md:text-start text-center text-3xl font-semibold text-yellow-500'> we make yoga accessible to all choose from our selected list of instructors and start your yoga journey today.</p>
           <div className='flex md:flex-row flex-col gap-6 mt-10'>
-            <Button>book instrctor</Button>
-            <Button>explore yoga</Button>
+            <Button><Link to={`booking`}>book instrctor</Link></Button>
+            <Button><Link to={`explore`}>explore yoga</Link></Button>
           </div>
         </div>
         <img src={homeImage} alt="homeImage" className='w-auto md:w-1/2' />

@@ -7,8 +7,9 @@ html,body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: scroll;
+  /* overflow: scroll; */
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 @layer base {
   :root {
